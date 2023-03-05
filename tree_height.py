@@ -29,7 +29,7 @@ def main():
     ievade = input()
     #If "a" in ievade: # Ja ievadītajā tekstā ir "a", tad kods dod atpakaļ gaitu
         #return
-    if "I\r" in ievade:
+    if "I" in ievade:
         n = int(input())
         parents = list(map(int, input().split()))
         print(compute_height(n, parents))
