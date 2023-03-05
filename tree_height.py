@@ -48,6 +48,7 @@ def main():
             parents = list(map(int, file.readline().strip().split())) # un tad otrā rinda arī tiek pārdēvēta par skaitli un atdalīti elementi savā starpā, izmantojot funkciju map()
             print(compute_height(number, parents)) # Izvada koka augstumu
 
+
 sys.setrecursionlimit(10**7)  
 threading.stack_size(2**27)   
 threading.Thread(target=main).start()
