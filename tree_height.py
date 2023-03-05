@@ -30,16 +30,17 @@ def main():
     if "a" in ievade:
         # If the input contains "a", the code returns without doing anything
         return
-    elif "I" in ievade:
+    if "I" in ievade:
         n = int(input())
         parents = list(map(int, input().split()))
         print(compute_height(n, parents))
-    elif "F" in ievade:
-        filename = "test/" + input()
-        with open(filename, "r") as file:
-            n = int(file.readline())
+    if "F" in ievade:
+        ievade = "test/" + input()
+        with open(ievade, 'r') as file:
+            n = int(file.readline().strip())
             parents = list(map(int, file.readline().split()))
             print(compute_height(n, parents))
+
 
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
