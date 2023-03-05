@@ -4,8 +4,8 @@
 import sys
 import threading
 
-class Node: # Tiek definēta klase Node jeb Mezgls
-    def children_list(self):
+class Node: # Tiek definēta klase Node jeb Mezgls, kas aprakstīs visus mezglus koka struktūrā
+    def __list__(self): # Tiek definēts konstruktors
         self.children = [] #Tiek definēts, ka mezgla saraksts ir "children", kas ir sākotnēji ir tukšs, jo nekas netika ievadīts
 
 def compute_height(n, parents):
