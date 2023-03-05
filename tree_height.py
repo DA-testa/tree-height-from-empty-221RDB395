@@ -38,9 +38,9 @@ def main():
 
     if "F" in ievade:
         ievade = "test/" + input()
-        with open(ievade, "r") as file:
-            n = int(file.readline())
-            parents = list(map(int, input().split()))
+        with open(ievade, 'r') as file:
+            n = int(file.readline().strip())
+            parents = list(map(int, file.readline().strip().split()))
             print(compute_height(n, parents))
 
 # In Python, the default limit on recursion depth is rather low,
