@@ -4,9 +4,9 @@
 import sys
 import threading
 
-class Node:
-    def __init__(self):
-        self.children = []
+class Node: # Tiek definēta klase Node jeb Mezgls
+    def children_list(self):
+        self.children = [] #Tiek definēts, ka mezgla saraksts ir "children", kas ir sākotnēji ir tukšs, jo nekas netika ievadīts
 
 def compute_height(n, parents):
     nodes = [Node() for i in range(n)]
@@ -43,9 +43,6 @@ def main():
             parents = list(map(int, file.readline().strip().split()))
             print(compute_height(n, parents))
 
-# In Python, the default limit on recursion depth is rather low,
-# so raise it here for this problem. Note that to take advantage
-# of bigger stack, we have to launch the computation in a new thread.
-sys.setrecursionlimit(10**7)  # max depth of recursion
-threading.stack_size(2**27)   # new thread will get stack of such size
+sys.setrecursionlimit(10**7)  
+threading.stack_size(2**27)   
 threading.Thread(target=main).start()
