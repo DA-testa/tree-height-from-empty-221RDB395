@@ -27,8 +27,8 @@ def get_height(node):
 
 def main():
     ievade = input()
-    If "a" in ievade: # Ja ievadītajā tekstā ir "a", tad kods dod atpakaļ gaitu
-        return
+    #If "a" in ievade: # Ja ievadītajā tekstā ir "a", tad kods dod atpakaļ gaitu
+        #return
     If "I\r" in ievade:
         n = int(input())
         parents = list(map(int, input().split()))
